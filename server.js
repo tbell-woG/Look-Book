@@ -8,6 +8,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/lookBook");
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
