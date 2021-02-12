@@ -1,5 +1,6 @@
 import axios from "axios"
 
+// api calls
 export default {
     // make a function to retrieve art data
     getArt: function() {
