@@ -3,7 +3,6 @@ import API from "../utils/API"
 
 function Art() {
     API.getArt().then(res => console.log(res))
-
     return (
         <div>
             Welcome To The Art Page
