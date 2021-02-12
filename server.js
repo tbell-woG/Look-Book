@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const routes = require("./routes/art")
+const routes = require("./routes/api/art")
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-app.use(routes)
+app.use('/api',routes)
 
 // Send every reques to the React app
 // Define any API routes before this runs
