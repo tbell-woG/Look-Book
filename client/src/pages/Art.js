@@ -15,6 +15,7 @@ function Art() {
     
 
         const artCardMap = art.map(el => {
+            console.log(el)
             return (
             <h1>{el.title}</h1>
           
