@@ -19,10 +19,21 @@ module.exports = {
         db.Art
         .create(req.body)
         .then(dbModel => {
-            console.log(dbModel)
+            console.log(`this is a DBMODEL--->${dbModel}`)
             res.json(dbModel)
         })
         .catch(err => res.status(422).json(err))
     },
-    // method to update the db
+    // method to delete the a saved artwork
+      delete: function(req, res) {
+        db.Art
+      .deleteOne(req.id)
+      .then(dbModel => {
+          console.log(dbModel)
+        res.json(dbModel)
+        })
+      .catch(err => res.status(422).json(err));
+      }
+
+
 }
