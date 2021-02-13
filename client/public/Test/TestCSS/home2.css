@@ -1,0 +1,36 @@
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.navbar {
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 17px;
+    margin-left:30px;
+    margin-right:70px;
+    font-size: 20px;
+}
+  
+.navbar a:hover {
+    background-color: rgb(255, 255, 255);
+}
+  
+  
+@media screen and (max-width: 500px) {
+.navbar a {
+    float: none;
+    display: block;
+    }
+}
