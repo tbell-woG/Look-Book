@@ -8,7 +8,7 @@ function Art() {
         API.getArtFromMuseum()
             .then(res => {
                 console.log('Attempting to Get Art From Museum')
-                console.log(`This is the Response--->${res.data}`)
+                console.log(`This is the Response--->${res}`)
 
                 setArt(res.data.artObjects)
                 console.log(`This is Art---> ${art}`)
