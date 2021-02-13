@@ -1,0 +1,14 @@
+.login {
+  border: none;
+}
+
+.callout {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 150px;
+  background-color: transparent;
+}
+
+.button {
+ background-color: black;
+}
