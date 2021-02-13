@@ -6,8 +6,18 @@
     background-color: transparent;
     background: rgba(255,255,255,0.5);
     border-color: black;
-  }
-  
-  .button {
+}
+
+/* rounded border for email and name submit */
+input[type=email] {
+    border-radius: 5px;
+}
+
+/* rounded border for password input */
+input[type=password] {
+    border-radius: 5px;
+}
+
+.button {
    background-color: black;
-  }
+}

@@ -12,6 +12,17 @@
   border-color: black;
 }
 
+/* input field for email is rounded */
+input[type=email] {
+  border-radius: 5px;
+}
+
+/* input field for password is rounded */
+input[type=password] {
+  border-radius: 5px;
+}
+
+/* button color is black */
 .button {
  background-color: black;
 }
