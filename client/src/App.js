@@ -4,6 +4,7 @@ import Art from "./pages/Art"
 import "./App.css";
 import API from "./utils/API"
 
+
 class App extends Component {
 
   render() {
