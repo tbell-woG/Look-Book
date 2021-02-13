@@ -54,12 +54,6 @@
     justify-content: center;
 }
 
-/* styling for where image / art title would go */
-.card-divider {
-    justify-content: center;
-    background-color: black;
-}
-
 h4 {
     color: white;
 }
