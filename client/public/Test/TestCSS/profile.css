@@ -1,0 +1,59 @@
+.bg-light {
+    background-color: transparent !important;
+}
+
+.navbar {
+    width: 100%;
+    overflow: auto;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 30px;
+    margin-right: 70px;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+.vertical-logo {
+    border-right: 2px solid rgb(0, 0, 0);
+}
+
+/* centers card within the page and gives it some space from the header */
+.card {
+    border-radius: 4px;;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: transparent;
+    background: rgba(255,255,255,0.5);
+    padding-left: auto;
+}
+
+/* centers content / categories for selected art piece */
+.card-section {
+    justify-content: center;
+}
+
+h4 {
+    color: white;
+}
