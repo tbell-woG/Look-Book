@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const routes = require("./routes/api/art")
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -17,11 +18,16 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/lookBook",
   useCreateIndex: true,
   useFindAndModify: false
 }
-
-
 );
+// define middleware
 
-// Send every request to the React app
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
+app.use('/api',routes)
+
+// Send every reques to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
