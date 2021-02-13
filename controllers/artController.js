@@ -19,7 +19,7 @@ module.exports = {
         db.Art
         .create(req.body)
         .then(dbModel => {
-            console.log(dbModel)
+            console.log(`this is a DBMODEL--->${dbModel}`)
             res.json(dbModel)
         })
         .catch(err => res.status(422).json(err))
@@ -37,20 +37,3 @@ module.exports = {
 
 
 }
-
-
-
-// app.delete("/delete/:id", (req, res) => {
-//   db.notes.remove(
-//     {
-//       _id: mongojs.ObjectID(req.params.id)
-//     },
-//     (error, data) => {
-//       if (error) {
-//         res.send(error);
-//       } else {
-//         res.send(data);
-//       }
-//     }
-//   );
-// });
