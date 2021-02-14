@@ -64,7 +64,7 @@ function Art() {
         console.log(`This is the maker ${maker}`)
         return (
             <div>
-                <h1>{img}</h1>
+                {img}
                 {/* <h1>{maker}</h1> */}
             </div>
 
@@ -84,14 +84,18 @@ function Art() {
             {artCardMaker}
 
 
-            <div className="card" style={{ width: "18rem" }}>
-                <img src={artCardImage} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Card title: {artCardMap}</h5>
-                    <p className="card-text">Author: {artCardMaker}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+            {art.length ? (
+
+                //eventually you'll want your map here to loop over all of your objects and create the cards
+                <div className="card" style={{ width: "18rem" }}>
+                    <img src={art[0].webImage.url} className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">Card title: {artCardMap}</h5>
+                        <p className="card-text">Author: {artCardMaker}</p>
+                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
-            </div>
+            ) : <h1>Loading</h1>}
 
 
 
