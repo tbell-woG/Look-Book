@@ -12,8 +12,6 @@ function Art() {
                 console.log(res)
 
                 setArt(res.data.artObjects)
-                console.log("under me is the art")
-                console.log(art)
             })
     }, [])
 
@@ -22,38 +20,63 @@ function Art() {
     const artCardMap = art.map((el, index) => {
         console.log(el)
         console.log(index)
-        console.log(`This is the Art card Map----> ${artCardMap}`)
         const title = el.title
+        const maker = el.principalOrFirstMaker
         console.log(`This is the Title ---> ${title}`)
+        console.log(`This is the maker ${maker}`)
         return (
-            <h1>{title}</h1>
-            )
-        })
+            <div>
+                <h1>{title}</h1>
+                {/* <h1>{maker}</h1> */}
+            </div>
+
+
+        )
+    })
+
+
+    const artCardMaker = art.map((el, index) => {
+        console.log(el)
+        console.log(index)
+        const title = el.title
+        const maker = el.principalOrFirstMaker
+        console.log(`This is the Title ---> ${title}`)
+        console.log(`This is the maker ${maker}`)
+        return (
+            <div>
+                <h1>{maker}</h1>
+                {/* <h1>{maker}</h1> */}
+            </div>
+
+
+        )
+    })
 
 
     return (
-                <div>
+        <div>
 
-                    Welcome To The Art Page
+            Welcome To The Art Page
 
-                    Check out our Sweet Titles
+            Check out our Sweet Titles
 
             {artCardMap}
+            {artCardMaker}
 
 
-            <div className="card" style={{width: "18rem"}}>
-                <img src="..." className="card-img-top" alt="..."/>
-                    <div className="card-body">
-    <h5 className="card-title">Card title: {artCardMap}</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
+            <div className="card" style={{ width: "18rem" }}>
+                <img src="..." className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">Card title: {artCardMap}</h5>
+                    <p className="card-text">Author: {artCardMaker}</p>
+                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                </div>
             </div>
 
 
 
 
-                </div>
+        </div>
     )
 }
 
