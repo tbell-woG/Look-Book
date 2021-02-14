@@ -19,7 +19,7 @@ module.exports = {
         db.Art
         .create(req.body)
         .then(dbModel => {
-            console.log(`this is a DBMODEL--->${dbModel}`)
+            console.log(`This is the DBMODEL----> ${dbModel}`)
             res.json(dbModel)
         })
         .catch(err => res.status(422).json(err))
