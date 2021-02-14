@@ -23,8 +23,10 @@ function Art() {
         console.log(el)
         console.log(index)
         console.log(`This is the Art card Map----> ${artCardMap}`)
+        const title = el.title
+        console.log(`This is the Title ---> ${title}`)
         return (
-            <h1>{el.title}</h1>
+            <h1>{title}</h1>
             )
         })
 
@@ -39,14 +41,14 @@ function Art() {
             {artCardMap}
 
 
-            {/* <div className="card" style={{width: "18rem"}}>
+            <div className="card" style={{width: "18rem"}}>
                 <img src="..." className="card-img-top" alt="..."/>
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
+    <h5 className="card-title">Card title: {artCardMap}</h5>
                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
-            </div> */}
+            </div>
 
 
 
