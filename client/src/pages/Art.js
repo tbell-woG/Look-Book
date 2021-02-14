@@ -38,13 +38,33 @@ function Art() {
     const artCardMaker = art.map((el, index) => {
         console.log(el)
         console.log(index)
-        const title = el.title
         const maker = el.principalOrFirstMaker
+        const title = el.title
+        console.log(`This should be the IMAGE --->${el.webImage.url}`)
         console.log(`This is the Title ---> ${title}`)
         console.log(`This is the maker ${maker}`)
         return (
             <div>
                 <h1>{maker}</h1>
+                {/* <h1>{maker}</h1> */}
+            </div>
+
+
+        )
+    })
+
+    const artCardImage = art.map((el, index) => {
+        console.log(el)
+        console.log(index)
+        const maker = el.principalOrFirstMaker
+        const title = el.title
+        console.log(`This should be the IMAGE --->${el.webImage.url}`)
+        const img = el.webImage.url
+        console.log(`This is the Title ---> ${title}`)
+        console.log(`This is the maker ${maker}`)
+        return (
+            <div>
+                <h1>{img}</h1>
                 {/* <h1>{maker}</h1> */}
             </div>
 
@@ -65,7 +85,7 @@ function Art() {
 
 
             <div className="card" style={{ width: "18rem" }}>
-                <img src="..." className="card-img-top" alt="..." />
+                <img src={artCardImage} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">Card title: {artCardMap}</h5>
                     <p className="card-text">Author: {artCardMaker}</p>
