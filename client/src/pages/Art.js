@@ -12,7 +12,8 @@ function Art() {
                 console.log(res)
 
                 setArt(res.data.artObjects)
-                console.log(`This is Art---> ${art}`)
+                console.log("under me is the art")
+                console.log(art)
             })
     }, [])
 
