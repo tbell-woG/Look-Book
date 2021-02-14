@@ -5,8 +5,8 @@ import axios from "axios"
     // make a function to retrieve art data
 export default {
     getArtFromMuseum: function() {
-        // return axios.get("https://www.rijksmuseum.nl/api/nl/collection?key=FAarGOKp&involvedMaker=Leonardo+da+Vinci")
-        return axios.get("https://www.rijksmuseum.nl/api/nl/collection?key=FAarGOKp&involvedMaker=Michelangelo&p=10&ps=4")
+        // return axios.get("https://www.rijksmuseum.nl/api/nl/collection?key=FAarGOKp&involvedMaker=Michelangelo&p=10&ps=1")
+        return axios.get("https://www.rijksmuseum.nl/api/nl/collection?key=FAarGOKp&p=10&ps=6")
     },
     getArtFromServer: function(){
         return axios.get('/api/art')
