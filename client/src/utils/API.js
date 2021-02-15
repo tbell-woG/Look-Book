@@ -7,8 +7,9 @@ export default {
     getArtFromMuseum: function() {
         return axios.get("https://www.rijksmuseum.nl/api/nl/collection?key=FAarGOKp&involvedMaker=Rembrandt+van+Rijn")
     },
-    getArtFromServer: function(){
+    getFavoriteArt: function(){
         return axios.get('/api/art')
+        console.log("I made contact with the database!")
     }
 
 }

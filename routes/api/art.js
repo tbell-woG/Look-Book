@@ -3,7 +3,7 @@ const router = require("express").Router();
 const artController = require("../../controllers/artController");
 
 
-//file is beginning already wiht /api
+//file is beginning already with /api
 
 // make a get request
 router.route('/art')
