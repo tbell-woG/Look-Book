@@ -3,6 +3,17 @@ import API from "../utils/API"
 
 function Art() {
     const [art, setArt] = useState([])
+    // create an api state set it to an empty array 
+
+    // style object 
+
+    const styles = {
+        img: {
+            maxHeight: "200px",
+            masWidth: "200px"
+        }
+    }
+
 
     useEffect(() => {
         API.getArtFromMuseum()
@@ -88,7 +99,7 @@ function Art() {
 
                 //eventually you'll want your map here to loop over all of your objects and create the cards
                 <div className="card" style={{ width: "18rem" }}>
-                    <img src={art[0].webImage.url} className="card-img-top" alt="..." />
+                    <img src={art[0].webImage.url} style={styles.img} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">Card title: {artCardMap}</h5>
                         <p className="card-text">Author: {artCardMaker}</p>
