@@ -1,0 +1,42 @@
+/* input styling parameters from login.css */
+
+.card {
+    border-radius: 25px;
+    width: 50%;
+    border-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: transparent;
+    background: rgba(255,255,255,0.5);
+    padding-left: auto;
+}
+
+.card-header {
+    justify-content: center;
+    border-radius: 25px;
+    background-color: black;
+}
+
+.text-center {
+    color: white;
+    background-color: black;
+}
+
+input[type=email] {
+    border-radius: 5px;
+}
+
+/* input field for password is rounded */
+
+input[type=password] {
+    border-radius: 5px;
+}
+
+/* button color is black */
+
+.button {
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

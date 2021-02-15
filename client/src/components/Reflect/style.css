@@ -1,0 +1,8 @@
+.card {
+    border-radius: 5px;
+    border-color: black;
+}
+
+.card-header {
+    color: black;
+}
