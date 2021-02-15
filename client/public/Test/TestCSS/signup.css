@@ -1,3 +1,55 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+  }
+  
+  .bg-light {
+    background-color: transparent !important;
+  }
+  
+  .navbar {
+    width: 100%;
+    overflow: auto;
+    border-bottom: 2px solid rgb(0, 0, 0);
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 17px;
+    margin-left:30px;
+    margin-right:70px;
+    font-size: 20px;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    }
+  }
+
+.text-center {
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+}
+
+label {
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif;
+}
+
 .callout {
     padding: 1rem;
     border-radius: 10px;
@@ -20,4 +72,7 @@ input[type=password] {
 
 .button {
    background-color: black;
+   font-size: 30px;
+   letter-spacing: 4px;
+   font-style: italic;
 }
