@@ -7,9 +7,9 @@ function Art() {
     useEffect(() => {
         API.getArtFromMuseum()
             .then(res => {
-                console.log('Attempting to Get Art From Museum')
-                console.log("under me is the res")
-                console.log(res)
+                // console.log('Attempting to Get Art From Museum')
+                // console.log("under me is the res")
+                // console.log(res)
 
                 setArt(res.data.artObjects)
             })
@@ -18,12 +18,12 @@ function Art() {
 
 
     const artCardMap = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
+        // console.log(el)
+        // console.log(index)
         const title = el.title
         const maker = el.principalOrFirstMaker
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
+        // console.log(`This is the Title ---> ${title}`)
+        // console.log(`This is the maker ${maker}`)
         return (
             <div>
                 <h1>{title}</h1>
@@ -36,13 +36,13 @@ function Art() {
 
 
     const artCardMaker = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
+        // console.log(el)
+        // console.log(index)
         const maker = el.principalOrFirstMaker
         const title = el.title
         console.log(`This should be the IMAGE --->${el.webImage.url}`)
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
+        // console.log(`This is the Title ---> ${title}`)
+        // console.log(`This is the maker ${maker}`)
         return (
             <div>
                 <h1>{maker}</h1>
@@ -54,14 +54,14 @@ function Art() {
     })
 
     const artCardImage = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
+        // console.log(el)
+        // console.log(index)
         const maker = el.principalOrFirstMaker
         const title = el.title
-        console.log(`This should be the IMAGE --->${el.webImage.url}`)
+        // console.log(`This should be the IMAGE --->${el.webImage.url}`)
         const img = el.webImage.url
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
+        // console.log(`This is the Title ---> ${title}`)
+        // console.log(`This is the maker ${maker}`)
         return (
             <div>
                 {img}

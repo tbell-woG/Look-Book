@@ -5,6 +5,7 @@ import "foundation-sites/dist/css/foundation.css";
 import logo from "./logo.svg";
 import "./App.css";
 import Art from "./pages/Art";
+import Favorites from "./pages/Favorites";
 import Navbar from "./components/Navbar/Navbar";
 import Card from "./components/Card/Card";
 import Container from "./components/Container/Container";
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <div>
         <Art />
+        <Favorites />
         <Navbar />
         <Card />
         <Container />
