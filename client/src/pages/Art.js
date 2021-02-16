@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react"
-import API from "../utils/API"
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
+import db from "../../../"
 
 function Art() {
     const [art, setArt] = useState([])
+    const [index, setIndex] = useState(0)
 
     useEffect(() => {
         API.getArtFromMuseum()
@@ -12,94 +14,50 @@ function Art() {
                 console.log(res)
 
                 setArt(res.data.artObjects)
+                // create random number
+                const index = Math.floor(Math.random() * 6)
+                setIndex(index)
+                // set index to random number
+
             })
     }, [])
 
 
+    function voteNo () {
+        console.log('They are attempting to vote no!')
+        // reload the webpage 
+        // locaation.reload()
+        // add index
+        // const newIndex = index + 1
+        // setIndex(newIndex)
+        setIndex(prevIndex => prevIndex - 1)
+    }
 
-    const artCardMap = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
-        const title = el.title
-        const maker = el.principalOrFirstMaker
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
-        return (
-            <div>
-                <h1>{title}</h1>
-                {/* <h1>{maker}</h1> */}
-            </div>
+    function voteYes() {
+        console.log('They are attempting to vote yes')
+        
 
-
-        )
-    })
-
-
-    const artCardMaker = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
-        const maker = el.principalOrFirstMaker
-        const title = el.title
-        console.log(`This should be the IMAGE --->${el.webImage.url}`)
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
-        return (
-            <div>
-                <h1>{maker}</h1>
-                {/* <h1>{maker}</h1> */}
-            </div>
-
-
-        )
-    })
-
-    const artCardImage = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
-        const maker = el.principalOrFirstMaker
-        const title = el.title
-        console.log(`This should be the IMAGE --->${el.webImage.url}`)
-        const img = el.webImage.url
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
-        return (
-            <div>
-                {img}
-                {/* <h1>{maker}</h1> */}
-            </div>
-
-
-        )
-    })
-
+    }
 
     return (
         <div>
-
             Welcome To The Art Page
 
             Check out our Sweet Titles
-
-            {artCardMap}
-            {artCardMaker}
-
-
             {art.length ? (
+                //map over data and make a card element
+                // select a random number between 1 and 6
 
-                //eventually you'll want your map here to loop over all of your objects and create the cards
                 <div className="card" style={{ width: "18rem" }}>
-                    <img src={art[0].webImage.url} className="card-img-top" alt="..." />
+                    <img src={art[index].webImage.url} className="card-img-top" alt="Picture coming from the art database" />
                     <div className="card-body">
-                        <h5 className="card-title">Card title: {artCardMap}</h5>
-                        <p className="card-text">Author: {artCardMaker}</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                        <h5 className="card-title">Card title: {art[index].title}</h5>
+                        <p className="card-text">Author: {art[index].principalOrFirstMaker}</p>
+                        <a href="#" onClick={voteNo} className="btn btn-primary">Vote No</a>
+                        <a href="#" onClick={voteYes} className="btn btn-primary">Vote Yes</a>
                     </div>
                 </div>
             ) : <h1>Loading</h1>}
-
-
-
-
         </div>
     )
 }
