@@ -20,6 +20,16 @@ function Favorites() {
         })
     }, [])
     
+    function remove(id) {
+        console.log("Attempting to remove an art piece!") 
+        axios({
+         method: 'delete',
+         url: '/api/art/:id',
+         data: {
+           id: id
+         }
+       });
+     }
 
     return (
         <div>
@@ -32,7 +42,7 @@ function Favorites() {
                             <div className="card-body">
                                 <h5 className="card-title">{art.title}</h5>
                                 <p className="card-text">{art.author}</p>
-                                {/* <a className="btn btn-danger" onClick={() => remove(art._id)}>Remove</a> */}
+                                <a className="btn btn-danger" onClick={() => remove(art._id)}>Remove</a>
                             </div>
                         </div>
                     </div>
