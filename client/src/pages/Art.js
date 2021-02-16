@@ -35,6 +35,7 @@ function Art() {
                     <div className="card-body">
                         <h5 className="card-title">Card title: {art[index].title}</h5>
                         <p className="card-text">Author: {art[index].principalOrFirstMaker}</p>
+                        <a href="#" className="btn btn-primary">Vote No</a>
                         <a href="#" className="btn btn-primary">Vote Yes</a>
 
                     </div>
