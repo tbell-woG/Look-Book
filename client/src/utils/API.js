@@ -9,7 +9,6 @@ export default {
     },
     getFavoriteArt: function(){
         return axios.get('/api/art')
-        console.log("I made contact with the database!")
     }
 
 }

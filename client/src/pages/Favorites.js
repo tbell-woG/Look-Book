@@ -13,12 +13,6 @@ function Favorites() {
         })
     },[])
 
-  
-
-    
-      
-
-
 
     return (
         <div>
