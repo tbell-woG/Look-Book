@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios"
 import API from "../utils/API";
-import db from "../../../"
+
 
 function Art() {
     const [art, setArt] = useState([])
@@ -33,10 +34,19 @@ function Art() {
         setIndex(prevIndex => prevIndex - 1)
     }
 
-    function voteYes() {
+    function voteYes(title, img, author) {
         console.log('They are attempting to vote yes')
-        
-
+        // post request
+        // axios post method
+        axios({
+            method: 'post',
+            url: '/api/art',
+            data: {
+              title: title,
+              image: img,
+              author: author
+            }
+          });
     }
 
     return (
@@ -54,7 +64,7 @@ function Art() {
                         <h5 className="card-title">Card title: {art[index].title}</h5>
                         <p className="card-text">Author: {art[index].principalOrFirstMaker}</p>
                         <a href="#" onClick={voteNo} className="btn btn-primary">Vote No</a>
-                        <a href="#" onClick={voteYes} className="btn btn-primary">Vote Yes</a>
+                        <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-primary">Vote Yes</a>
                     </div>
                 </div>
             ) : <h1>Loading</h1>}
