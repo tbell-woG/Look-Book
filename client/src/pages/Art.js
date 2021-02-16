@@ -80,13 +80,24 @@ function Art() {
 
             Check out our Sweet Titles
 
-            {artCardMap}
-            {artCardMaker}
-
+            {art.map((el) => {
+                const title = el.title
+                console.log('BELOW IS THE TITLE')
+                console.log(title)
+                const maker = el.principalOrFirstMaker
+                console.log('Below is the Author')
+                console.log(maker)
+                const img = art[0].webImage.url
+                console.log("Below is the Img Tag")
+                console.log(img)
+            })}
 
             {art.length ? (
 
-                //eventually you'll want your map here to loop over all of your objects and create the cards
+                //map over data and make a card element
+                
+
+                
                 <div className="card" style={{ width: "18rem" }}>
                     <img src={art[0].webImage.url} className="card-img-top" alt="..." />
                     <div className="card-body">
