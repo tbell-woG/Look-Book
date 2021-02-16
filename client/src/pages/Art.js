@@ -10,9 +10,9 @@ function Art() {
     useEffect(() => {
         API.getArtFromMuseum()
             .then(res => {
-                console.log('Attempting to Get Art From Museum')
-                console.log("under me is the res")
-                console.log(res)
+                // console.log('Attempting to Get Art From Museum')
+                // console.log("under me is the res")
+                // console.log(res)
 
                 setArt(res.data.artObjects)
                 // create random number
