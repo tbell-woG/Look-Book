@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react"
 import API from "../utils/API"
-import axios from 
+import axios from "axios"
 
 
 //import Card from "../componetents/Card";
 
-function remove() {
-   console.log("Attempting to remove an art piece!") 
-}
+
 
 function Favorites() {
     const [favorites, setFavorites] = useState([])
@@ -34,7 +32,7 @@ function Favorites() {
                             <div className="card-body">
                                 <h5 className="card-title">{art.title}</h5>
                                 <p className="card-text">{art.author}</p>
-                                <a className="btn btn-danger" onClick={remove()}>Remove</a>
+                                {/* <a className="btn btn-danger" onClick={() => remove(art._id)}>Remove</a> */}
                             </div>
                         </div>
                     </div>
