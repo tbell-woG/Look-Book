@@ -24,6 +24,12 @@ function Art() {
 
     function voteNo () {
         console.log('They are attempting to vote no!')
+        // reload the webpage 
+        // locaation.reload()
+        // add index
+        const newIndex = index + 1
+        setIndex(newIndex)
+
     }
 
     return (
