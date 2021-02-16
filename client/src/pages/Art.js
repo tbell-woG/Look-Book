@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import API from "../utils/API"
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
 
 function Art() {
     const [art, setArt] = useState([])
@@ -36,7 +36,7 @@ function Art() {
                         <h5 className="card-title">Card title: {art[index].title}</h5>
                         <p className="card-text">Author: {art[index].principalOrFirstMaker}</p>
                         <a href="#" className="btn btn-primary">Vote Yes</a>
-                        
+
                     </div>
                 </div>
             ) : <h1>Loading</h1>}
