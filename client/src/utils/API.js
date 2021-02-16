@@ -8,7 +8,7 @@ export default {
         // return axios.get("https://www.rijksmuseum.nl/api/nl/collection?key=FAarGOKp&involvedMaker=Michelangelo&p=10&ps=1")
         return axios.get("https://www.rijksmuseum.nl/api/nl/collection?key=FAarGOKp&p=10&ps=1")
     },
-    getArtFromServer: function(){
+    getFavoriteArt: function(){
         return axios.get('/api/art')
     }
 

@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Art /> */}
+        <Art />
         <Navbar />
         <Card />
         <Container />
