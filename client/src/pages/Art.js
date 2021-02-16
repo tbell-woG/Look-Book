@@ -16,63 +16,6 @@ function Art() {
     }, [])
 
 
-
-    const artCardMap = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
-        const title = el.title
-        const maker = el.principalOrFirstMaker
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
-        return (
-            <div>
-                <h1>{title}</h1>
-                {/* <h1>{maker}</h1> */}
-            </div>
-
-
-        )
-    })
-
-
-    const artCardMaker = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
-        const maker = el.principalOrFirstMaker
-        const title = el.title
-        console.log(`This should be the IMAGE --->${el.webImage.url}`)
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
-        return (
-            <div>
-                <h1>{maker}</h1>
-                {/* <h1>{maker}</h1> */}
-            </div>
-
-
-        )
-    })
-
-    const artCardImage = art.map((el, index) => {
-        console.log(el)
-        console.log(index)
-        const maker = el.principalOrFirstMaker
-        const title = el.title
-        console.log(`This should be the IMAGE --->${el.webImage.url}`)
-        const img = el.webImage.url
-        console.log(`This is the Title ---> ${title}`)
-        console.log(`This is the maker ${maker}`)
-        return (
-            <div>
-                {img}
-                {/* <h1>{maker}</h1> */}
-            </div>
-
-
-        )
-    })
-
-
     return (
         <div>
 
@@ -80,24 +23,29 @@ function Art() {
 
             Check out our Sweet Titles
 
-            {art.map((el) => {
-                const title = el.title
-                console.log('BELOW IS THE TITLE')
-                console.log(title)
-                const maker = el.principalOrFirstMaker
-                console.log('Below is the Author')
-                console.log(maker)
-                const img = art[0].webImage.url
-                console.log("Below is the Img Tag")
-                console.log(img)
-            })}
-
-            {art.length ? (
-
-                //map over data and make a card element
+            {art.map((el) => (
+                // const title = el.title
+                // console.log('BELOW IS THE TITLE')
+                // console.log(title)
+                // const maker = el.principalOrFirstMaker
+                // console.log('Below is the Author')
+                // console.log(maker)
+                // const img = art[0].webImage.url
+                // console.log("Below is the Img Tag")
+                // console.log(img)
                 
+                <div className="card" style={{ width: "18rem" }}>
+                <img src={el.webImage.url} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">Card title: {el.title}</h5>
+                    <p className="card-text">Author: {el.principalOrFirstMaker}</p>
+                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            ))}
 
-                
+            {/* {art.length ? (
+                //map over data and make a card element      
                 <div className="card" style={{ width: "18rem" }}>
                     <img src={art[0].webImage.url} className="card-img-top" alt="..." />
                     <div className="card-body">
@@ -106,11 +54,7 @@ function Art() {
                         <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-            ) : <h1>Loading</h1>}
-
-
-
-
+            ) : <h1>Loading</h1>} */}
         </div>
     )
 }
