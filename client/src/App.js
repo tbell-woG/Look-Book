@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "foundation-sites/dist/css/foundation.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Search from "./pages/Search";
+import Art from "./pages/Art";
 import Favorites from "./pages/Favorites";
 import Navbar from "./components/Navbar/Navbar"; 
 import logo from "./logo.svg";
@@ -19,11 +20,11 @@ class App extends Component {
       <Router>
       <div>
         <Navbar />
-        {/* Will need to import home page from Tamira */}
+          <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/search" component={Search} />
+          <Route exact path="/search" component={Art} />
           <Route exact path="/favorites" component={Favorites} />
       </div>
       </Router>
