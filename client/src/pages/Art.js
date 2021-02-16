@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
+import db from "../../../"
 
 function Art() {
     const [art, setArt] = useState([])
@@ -34,6 +35,7 @@ function Art() {
 
     function voteYes() {
         console.log('They are attempting to vote yes')
+        
 
     }
 
