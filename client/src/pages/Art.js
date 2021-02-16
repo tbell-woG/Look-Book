@@ -27,9 +27,9 @@ function Art() {
         // reload the webpage 
         // locaation.reload()
         // add index
-        const newIndex = index + 1
-        setIndex(newIndex)
-
+        // const newIndex = index + 1
+        // setIndex(newIndex)
+        setIndex(prevIndex => prevIndex - 1)
     }
 
     function voteYes() {
