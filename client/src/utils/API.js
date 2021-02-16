@@ -10,6 +10,10 @@ export default {
     },
     getFavoriteArt: function(){
         return axios.get('/api/art')
-    }
+    },
+    // Deletes the post with the given id
+    deleteFavorite: function(id) {
+    return axios.delete("/api/art/" + id);
+  },
 
 }
