@@ -4,25 +4,45 @@ import API from "../utils/API";
 
 
 function Art() {
-    const [art, setArt] = useState([])
+    const [art, setArt] = useState({})
+    const [piecesOfArt, setPiecesOfArt] = useState([])
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
-        API.getArtFromMuseum()
-            .then(res => {
+        // API.getArtFromMuseum()
+        //     .then(res => {
                 // console.log('Attempting to Get Art From Museum')
                 // console.log("under me is the res")
                 // console.log(res)
+                // setPiecesOfArt(res.data.artObjects)
+                // setArt(piecesOfArt[0])
+                // console.log(art)
+                // // create random number
+                // const index = Math.floor(Math.random() * 6)
+                // setIndex(index)
+                // set index to random number
 
-                setArt(res.data.artObjects)
+                loadArt()
+
+            // })
+    }, [])
+
+    function loadArt () {
+        API.getArtFromMuseum()
+            .then(res => {
+                // console.log('Attempting to Get Art From Museum')
+                console.log("under me is the res")
+                console.log(res)
+                // setPiecesOfArt(res.data.artObjects)
+                setArt(piecesOfArt[0])
+                console.log(art)
                 // create random number
                 const index = Math.floor(Math.random() * 6)
                 setIndex(index)
                 // set index to random number
 
             })
-    }, [])
-
+    }
 
     function voteNo () {
         console.log('They are attempting to vote no!')
@@ -31,7 +51,7 @@ function Art() {
         // add index
         // const newIndex = index + 1
         // setIndex(newIndex)
-        setIndex(prevIndex => prevIndex - 1)
+        setIndex(prevIndex => prevIndex + 1)
     }
 
     function voteYes(title, img, author) {
@@ -54,20 +74,20 @@ function Art() {
             Welcome To The Art Page
 
             Check out our Sweet Titles
-            {art.length ? (
+            
                 //map over data and make a card element
                 // select a random number between 1 and 6
 
-                <div className="card" style={{ width: "18rem" }}>
-                    <img src={art[index].webImage.url} className="card-img-top" alt="Picture coming from the art database" />
+                {/* <div className="card" style={{ width: "18rem" }}>
+                    <img src={art.webImage.url} className="card-img-top" alt="Picture coming from the art database" />
                     <div className="card-body">
-                        <h5 className="card-title">Card title: {art[index].title}</h5>
-                        <p className="card-text">Author: {art[index].principalOrFirstMaker}</p>
+                        <h5 className="card-title">Card title: {art.title}</h5>
+                        <p className="card-text">Author: {art.principalOrFirstMaker}</p>
                         <a href="#" onClick={voteNo} className="btn btn-primary">Vote No</a>
                         <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-primary">Vote Yes</a>
                     </div>
-                </div>
-            ) : <h1>Loading</h1>}
+                </div> */}
+
         </div>
     )
 }
