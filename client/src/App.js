@@ -1,29 +1,32 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "foundation-sites/dist/css/foundation.css";
-// Will have to use LINK from react-router-dom
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Search from "./pages/Search";
+import Favorites from "./pages/Favorites";
+import Navbar from "./components/Navbar/Navbar"; 
 import logo from "./logo.svg";
 import "./App.css";
-import Art from "./pages/Art";
-import Navbar from "./components/Navbar/Navbar";
-import Card from "./components/Card/Card";
-import Container from "./components/Container/Container";
-import Form from "./components/Form/Form";
-import Reflect from "./components/Reflect/Reflect"
 import API from "./utils/API"
 
 class App extends Component {
 
   render() {
     return (
+      <Router>
       <div>
-        <Art />
         <Navbar />
-        <Card />
-        <Container />
-        <Form />
-        <Reflect />
+        {/* Will need to import home page from Tamira */}
+          <Route exact path="/about" component={About} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/search" component={Search} />
+          <Route exact path="/favorites" component={Favorites} />
       </div>
+      </Router>
     );
   }
 }
