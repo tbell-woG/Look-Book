@@ -53,7 +53,7 @@ function Art() {
                 // select a random number between 1 and 6
 
                 <div className="card" style={{ width: "18rem" }}>
-                    <img src={art[index].webImage.url} className="card-img-top" alt="..." />
+                    <img src={art[index].webImage.url} className="card-img-top" alt="Picture coming from the art database" />
                     <div className="card-body">
                         <h5 className="card-title">Card title: {art[index].title}</h5>
                         <p className="card-text">Author: {art[index].principalOrFirstMaker}</p>
