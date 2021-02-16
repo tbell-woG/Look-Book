@@ -16,8 +16,8 @@ function Art() {
 
                 setArt(res.data.artObjects)
                 // create random number
-                const index = Math.floor(Math.random() * 6)
-                setIndex(index)
+                // const index = Math.floor(Math.random() * 6)
+                // setIndex(index)
                 // set index to random number
 
             })
