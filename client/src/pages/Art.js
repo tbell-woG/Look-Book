@@ -14,7 +14,18 @@ function Art() {
                 console.log("under me is the res")
                 console.log(res)
 
-                setArt(res.data.artObjects)
+                // loop through the response
+                var artPieces = []
+
+                for(i = 0; i < res.data.artObjects.length; i++) {
+                    console.log('we are entering the for loop')
+                    var i = index
+
+                    if (res.data.artObjects[i].webImage.url) {
+                        artPieces.push()
+                    }
+                }
+                setArt(artPieces)   
                 // create random number
                 // const index = Math.floor(Math.random() * 6)
                 // setIndex(index)
@@ -31,6 +42,7 @@ function Art() {
         // add index
         // const newIndex = index + 1
         // setIndex(newIndex)
+
         setIndex(prevIndex => prevIndex + 1)
         console.log(index)
     }
@@ -48,6 +60,9 @@ function Art() {
               author: author
             }
           });
+
+          // if art[index].webImage.url exists the setIndex to that index
+
           setIndex(prevIndex => prevIndex + 1)
           console.log(index)
     }
