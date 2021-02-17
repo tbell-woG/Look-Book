@@ -103,7 +103,7 @@ function Art() {
                     <img src={art[index].webImage.url} className="card-img-top" alt="Picture coming from the art database" />
                     <div className="card-body">
                         <h5 className="card-title">Art Title: {art[index].title}</h5>
-                        <p className="card-text">rtist: {art[index].principalOrFirstMaker}</p>
+                        <p className="card-text">Artist: {art[index].principalOrFirstMaker}</p>
                         <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-dark"><i className="fa fa-thumbs-up" aria-hidden="true"></i></a>
                         <a href="#" onClick={voteNo} className="btn btn-dark"><i className="fa fa-thumbs-down" aria-hidden="true"></i></a>
                         
