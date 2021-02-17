@@ -26,3 +26,32 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.card {
+  border-radius: 5px;
+  background-color: transparent;
+  background: rgba(255,255,255,0.5);
+  margin-top: 3%;
+  border-color: black;
+  border-width: 2px;
+  
+}
+
+.card-header {
+  color: white;
+  justify-content: center;
+}
+
+p {
+  padding: 2%;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+.page-content {
+  background: none;
+  color: black;
+}
+
