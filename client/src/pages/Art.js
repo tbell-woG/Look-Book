@@ -8,21 +8,56 @@ function Art() {
     const [art, setArt] = useState([])
     const [index, setIndex] = useState(0)
 
+    // useEffect(() => {
+    //     API.getArtFromMuseum()
+    //         .then(res => {
+    //             console.log('Attempting to Get Art From Museum')
+    //             console.log("under me is the res")
+    //             console.log(res)
+
+    //             // loop through the response
+    //             var artPieces = []
+
+    //             for(i = 0; i < res.data.artObjects.length; i++) {
+    //                 console.log('we are entering the for loop')
+    //                 var i = index
+
+    //                 if (res.data.artObjects[i].webImage.url) {
+    //                     artPieces.push()
+    //                 }
+    //             }
+    //             setArt(artPieces)   
+    //             // create random number
+    //             // const index = Math.floor(Math.random() * 6)
+    //             // setIndex(index)
+    //             // set index to random number
+
+    //         })
+    // }, [])
+
     useEffect(() => {
         API.getArtFromMuseum()
             .then(res => {
-                // console.log('Attempting to Get Art From Museum')
-                // console.log("under me is the res")
-                // console.log(res)
+                console.log('Attempting to Get Art From Museum')
+                console.log("under me is the res")
+                console.log(res.data.artObjects);
 
-                setArt(res.data.artObjects)
-                // create random number
-                const index = Math.floor(Math.random() * 6)
-                setIndex(index)
-                // set index to random number
+                // loop through the response
+                var artPieces = []
 
+                for (let i = 0; i < res.data.artObjects.length; i++) {
+                    console.log('iteration', i);
+
+                    if (res.data.artObjects[i].webImage) {
+                        console.log("artObject has image url");
+                        artPieces.push(res.data.artObjects[i]);
+                    }
+
+                }
+                console.log("setting state", artPieces);
+                setArt(artPieces);
             })
-    }, [])
+    }, []);
 
 
     function voteNo () {
@@ -32,7 +67,9 @@ function Art() {
         // add index
         // const newIndex = index + 1
         // setIndex(newIndex)
-        setIndex(prevIndex => prevIndex - 1)
+
+        setIndex(prevIndex => prevIndex + 1)
+        console.log(index)
     }
 
     function voteYes(title, img, author) {
@@ -48,6 +85,11 @@ function Art() {
               author: author
             }
           });
+
+          // if art[index].webImage.url exists the setIndex to that index
+
+          setIndex(prevIndex => prevIndex + 1)
+          console.log(index)
     }
 
     return (
@@ -61,7 +103,7 @@ function Art() {
                     <img src={art[index].webImage.url} className="card-img-top" alt="Picture coming from the art database" />
                     <div className="card-body">
                         <h5 className="card-title">Art Title: {art[index].title}</h5>
-                        <p className="card-text">rtist: {art[index].principalOrFirstMaker}</p>
+                        <p className="card-text">Artist: {art[index].principalOrFirstMaker}</p>
                         <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-dark"><i className="fa fa-thumbs-up" aria-hidden="true"></i></a>
                         <a href="#" onClick={voteNo} className="btn btn-dark"><i className="fa fa-thumbs-down" aria-hidden="true"></i></a>
                         
