@@ -8,18 +8,18 @@ function Container () {
         <div className="card border-dark">
             <div className="card-header">
             <h4>
-                Log in with your email account
+                LOG IN WITH YOUR EMAIL ACCOUNT
             </h4>
             </div>
             <label>Email
-                <input type="email" placeholder="please enter your email address here"></input>
+                <input type="email" placeholder="Enter Email"></input>
             </label>
             <label>Password
-                <input type="password" placeholder="please enter your password here"></input>
+                <input type="password" placeholder="Enter Password"></input>
             </label>
             <div className="button-group align-center">
                 {/* Will need to use Link once pages are set up in pages folder */}
-                <a href="#" className="button">LOGIN</a>
+                <a href="#" className="button">LOG IN</a>
             </div>
         </div>
     )

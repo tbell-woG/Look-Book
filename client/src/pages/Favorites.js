@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import API from "../utils/API"
 import axios from "axios"
-
+import 'font-awesome/css/font-awesome.min.css';
 
 //import Card from "../componetents/Card";
 
@@ -33,7 +33,7 @@ function Favorites() {
 
     return (
         <div>
-            <h2>Reflect on your favorite art</h2>
+            <h2>REFLECT ON YOUR FAVORITE ART</h2>
             {/* <div className="card"> */}
                 {favorites.map((art, index) => (
                     <div>
@@ -42,7 +42,7 @@ function Favorites() {
                             <div className="card-body">
                                 <h5 className="card-title">{art.title}</h5>
                                 <p className="card-text">{art.author}</p>
-                                <a className="btn btn-danger" onClick={() => remove(art._id)}>Remove</a>
+                                <a className="btn btn-dark" onClick={() => remove(art._id)}><i className="fa fa-trash" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

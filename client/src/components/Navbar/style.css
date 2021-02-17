@@ -5,6 +5,7 @@
   color: rgb(228, 212, 158);
   overflow: auto;
   border-bottom: 2px solid rgb(0, 0, 0);
+  font-family: 'Libre Baskerville', serif;
 }
 
 /* Font color now shows in black */
