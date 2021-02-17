@@ -7,10 +7,11 @@ import "./style.css";
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-sm">
-            <div className="logo">
+            <div className="navbar-brand">
                 <img src="https://i.ibb.co/Kzr4y96/kisspng-the-thinker-sculpture-drawing-masterpiece-5b3e0da0037481-6351671215307933760142.png"
                     alt="kisspng-the-thinker-sculpture-drawing-masterpiece" width="50" />
             </div>
+            
             <ul className="navbar-nav justify-content">
                 <li className="nav-item">
                     {/* Adding links to different pages in navbar using React Link */}
