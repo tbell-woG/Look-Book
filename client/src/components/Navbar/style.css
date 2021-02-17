@@ -5,15 +5,13 @@
   color: rgb(228, 212, 158);
   overflow: auto;
   border-bottom: 2px solid rgb(0, 0, 0);
+  font-family: 'Libre Baskerville', serif;
 }
 
-.nav-item > h4 {
+/* Font color now shows in black */
+.nav-link {
   color: black;
-}
-
-.nav-item {
   font-size: 25px;
-  display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
 }
