@@ -1,5 +1,5 @@
 # Lookbook
- An art application that brings the art muesuem to you. Using an api, it allows users to view art from different time periods around the world, favorite and also reflect on them. 
+ An art application that brings the art muesuem to you. Using an API, it allows users to view art from different time periods around the world, favorite and also reflect on them. 
 #
 
 Website Deployment Link: https://
