@@ -12,10 +12,12 @@
     padding-left: auto;
 }
 
-.card-header {
+/* Signup displays in white font */
+.card-header > h4 {
     justify-content: center;
     border-radius: 25px;
     background-color: black;
+    color: white;
 }
 
 .text-center {
@@ -23,11 +25,10 @@
     background-color: black;
 }
 
+
 input[type=email] {
     border-radius: 5px;
 }
-
-/* input field for password is rounded */
 
 input[type=password] {
     border-radius: 5px;

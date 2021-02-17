@@ -1,31 +1,65 @@
-// Navbar component. Displays in App.js
-// Will need to display links using Link 
+// Navbar component. 
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-sm">
-            {/* Logo will be in the Navbar */}
-            <div class="logo">
+            <div className="logo">
                 <img src="https://i.ibb.co/Kzr4y96/kisspng-the-thinker-sculpture-drawing-masterpiece-5b3e0da0037481-6351671215307933760142.png"
                     alt="kisspng-the-thinker-sculpture-drawing-masterpiece" width="50" />
             </div>
             <ul className="navbar-nav justify-content">
-                {/* items will need to display responsively */}
                 <li className="nav-item">
-                    {/* react Link will go to each of the react pages of app. See Pupster example */}
-                    <h4>HOME</h4>
+                    {/* Adding links to different pages in navbar using React Link */}
+                    <Link 
+                    to="/"
+                    className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+                    >
+                        HOME
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <h4>ABOUT</h4>
+                    <Link
+                    to="/about"
+                    className={window.location.pathname === "/about" ? "nav-link active" : "nav-link"}
+                    >
+                        ABOUT 
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <h4>SIGN IN</h4>
+                    <Link
+                    to="/signup"
+                    className={window.location.pathname === "/signup" ? "nav-link active" : "nav-link"}
+                    >
+                        SIGN UP 
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <h4>LOG IN</h4>
+                    <Link 
+                    to="/login"
+                    className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                    >
+                        LOG IN  
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link 
+                    to="/search"
+                    className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+                    >
+                        SEARCH  
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link 
+                    to="/favorites"
+                    className={window.location.pathname === "/favorites" ? "nav-link active" : "nav-link"}
+                    >
+                        FAVORITES  
+                    </Link>
                 </li>
             </ul>
         </nav>
