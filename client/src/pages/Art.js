@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 import API from "../utils/API";
+import 'font-awesome/css/font-awesome.min.css';
 
 
 function Art() {
@@ -51,9 +52,7 @@ function Art() {
 
     return (
         <div>
-            Welcome To The Art Page
-
-            Check out our Sweet Titles
+                VIEW AND FAVORITE ART PIECES
             {art.length ? (
                 //map over data and make a card element
                 // select a random number between 1 and 6
@@ -61,13 +60,14 @@ function Art() {
                 <div className="card" style={{ width: "18rem" }}>
                     <img src={art[index].webImage.url} className="card-img-top" alt="Picture coming from the art database" />
                     <div className="card-body">
-                        <h5 className="card-title">Card title: {art[index].title}</h5>
-                        <p className="card-text">Author: {art[index].principalOrFirstMaker}</p>
-                        <a href="#" onClick={voteNo} className="btn btn-primary">Vote No</a>
-                        <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-primary">Vote Yes</a>
+                        <h5 className="card-title">Art Title: {art[index].title}</h5>
+                        <p className="card-text">rtist: {art[index].principalOrFirstMaker}</p>
+                        <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-dark"><i className="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                        <a href="#" onClick={voteNo} className="btn btn-dark"><i className="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                        
                     </div>
                 </div>
-            ) : <h1>Loading</h1>}
+            ) : <h1>LOADING ART PIECES...</h1>}
         </div>
     )
 }

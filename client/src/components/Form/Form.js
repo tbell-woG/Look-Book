@@ -6,7 +6,7 @@ function Form () {
         <div className="card border-dark">
             <div className="card-header">
             <h4>
-                Sign up for <i>Look-Book</i></h4>
+                SIGN UP FOR LOOKBOOK</h4>
             </div>
             <label>First Name
                 <input type="password" placeholder="Enter Password"></input>
@@ -25,7 +25,7 @@ function Form () {
             </label>
             <div className="button-group align-center">
                 {/* Will need to use Link once pages are set up in pages folder */}
-                <a href="#" className="button">SIGNUP</a>
+                <a href="#" className="button">SIGN UP</a>
             </div>
         </div>
     )
