@@ -7,32 +7,56 @@ function Art() {
     const [art, setArt] = useState([])
     const [index, setIndex] = useState(0)
 
+    // useEffect(() => {
+    //     API.getArtFromMuseum()
+    //         .then(res => {
+    //             console.log('Attempting to Get Art From Museum')
+    //             console.log("under me is the res")
+    //             console.log(res)
+
+    //             // loop through the response
+    //             var artPieces = []
+
+    //             for(i = 0; i < res.data.artObjects.length; i++) {
+    //                 console.log('we are entering the for loop')
+    //                 var i = index
+
+    //                 if (res.data.artObjects[i].webImage.url) {
+    //                     artPieces.push()
+    //                 }
+    //             }
+    //             setArt(artPieces)   
+    //             // create random number
+    //             // const index = Math.floor(Math.random() * 6)
+    //             // setIndex(index)
+    //             // set index to random number
+
+    //         })
+    // }, [])
+
     useEffect(() => {
         API.getArtFromMuseum()
             .then(res => {
                 console.log('Attempting to Get Art From Museum')
                 console.log("under me is the res")
-                console.log(res)
+                console.log(res.data.artObjects);
 
                 // loop through the response
                 var artPieces = []
 
-                for(i = 0; i < res.data.artObjects.length; i++) {
-                    console.log('we are entering the for loop')
-                    var i = index
+                for (let i = 0; i < res.data.artObjects.length; i++) {
+                    console.log('iteration', i);
 
-                    if (res.data.artObjects[i].webImage.url) {
-                        artPieces.push()
+                    if (res.data.artObjects[i].webImage) {
+                        console.log("artObject has image url");
+                        artPieces.push(res.data.artObjects[i]);
                     }
-                }
-                setArt(artPieces)   
-                // create random number
-                // const index = Math.floor(Math.random() * 6)
-                // setIndex(index)
-                // set index to random number
 
+                }
+                console.log("setting state", artPieces);
+                setArt(artPieces);
             })
-    }, [])
+    }, []);
 
 
     function voteNo () {
