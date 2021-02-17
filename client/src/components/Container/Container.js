@@ -8,7 +8,7 @@ function Container () {
         <div className="card border-dark">
             <div className="card-header">
             <h4>
-                LOG IN WITH YOUR EMAIL ACCOUNT
+                LOG IN WITH YOUR EMAIL
             </h4>
             </div>
             <label>Email
@@ -19,7 +19,7 @@ function Container () {
             </label>
             <div className="button-group align-center">
                 {/* Will need to use Link once pages are set up in pages folder */}
-                <a href="#" className="button">LOG IN</a>
+                <a href="#" className="button">L O G  I N</a>
             </div>
         </div>
     )

@@ -22,7 +22,9 @@
     font-style: italic;
     text-align: center;
     font-size: 25px;
+    letter-spacing: 7px;
 }
+
 
 .text-center {
     color: white;

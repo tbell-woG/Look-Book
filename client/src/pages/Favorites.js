@@ -43,7 +43,7 @@ function Favorites() {
 
     return (
         <div>
-            <h2>REFLECT ON YOUR FAVORITE ART</h2>
+            <h2 style={{ fontFamily: "'Libre Baskerville', serif", letterSpacing: "7px", textAlign: "center", fontStyle: "italic", fontSize: "30px", padding: "70px" }}>REFLECT ON YOUR FAVORITE ART</h2>
             {/* <div className="card"> */}
             {favorites.map((art, index) => (
                 <div>
@@ -52,7 +52,7 @@ function Favorites() {
                         <div className="card-body">
                             <h5 className="card-title">{art.title}</h5>
                             <p className="card-text">{art.author}</p>
-                            <a className="btn btn-dark" onClick={() => remove(art._id)}><i className="fa fa-trash" aria-hidden="true"></i></a>
+                            <a className="btn btn-dark" onClick={() => remove(art._id)} style={{ marginLeft: "100px" }}><i className="fa fa-trash" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>

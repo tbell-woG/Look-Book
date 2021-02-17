@@ -25,7 +25,7 @@ function Form () {
             </label>
             <div className="button-group align-center">
                 {/* Will need to use Link once pages are set up in pages folder */}
-                <a href="#" className="button">SIGN UP</a>
+                <a href="#" className="button">S I G N  U P</a>
             </div>
         </div>
     )
