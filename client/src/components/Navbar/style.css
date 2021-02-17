@@ -7,13 +7,10 @@
   border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-.nav-item > h4 {
+/* Font color now shows in black */
+.nav-link {
   color: black;
-}
-
-.nav-item {
   font-size: 25px;
-  display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
 }
