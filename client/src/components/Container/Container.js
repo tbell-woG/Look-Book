@@ -1,14 +1,14 @@
 // Container component for log in
 import React from "react";
-import { Link } from "react-dom"
+import { Link } from "react-router-dom"
 import "./style.css";
 
-function Container () {
+function Container() {
     return (
         <div className="card border-dark">
             <div className="card-header">
-            <h4>
-                LOG IN WITH YOUR EMAIL ACCOUNT
+                <h4>
+                    LOG IN WITH YOUR EMAIL ACCOUNT
             </h4>
             </div>
             <label>Email
@@ -21,6 +21,13 @@ function Container () {
                 {/* Will need to use Link once pages are set up in pages folder */}
                 <a href="#" className="button">LOG IN</a>
             </div>
+            {/* Link to signup page */}
+            <div className="button-group align-center">
+                <Link to="/signup">
+                    New to Look-Book? Sign up here
+                </Link>
+            </div>
+
         </div>
     )
 };

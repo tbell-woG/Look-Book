@@ -27,6 +27,11 @@ body {
   to { transform: rotate(360deg); }
 }
 
+.btn {
+  background-color: black;
+  border-radius: 5px;
+}
+
 .card {
   border-radius: 5px;
   background-color: transparent;

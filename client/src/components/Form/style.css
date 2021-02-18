@@ -1,5 +1,8 @@
 /* input styling parameters from login.css */
-
+.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 .card {
     border-radius: 25px;
     width: 50%;
