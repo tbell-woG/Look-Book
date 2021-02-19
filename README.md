@@ -2,7 +2,7 @@
  An art application that brings the art muesuem to you. Using an API, it allows users to view art from different time periods around the world, favorite and also reflect on them. 
 #
 
-Website Deployment Link: https://sleepy-basin-63307.herokuapp.com/
+Website Deployment Link: https://look-book-tbell.herokuapp.com/
 
 Presentation Link: https://docs.google.com/presentation/d/1ttSGP1EemXDX7XyhkX8Tr8P701oyoMwwv9Ac0pgV2ck/edit#slide=id.gbf004cb2ba_0_109
 
