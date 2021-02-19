@@ -50,8 +50,8 @@ function Favorites() {
                     <div className="card" style={{ width: "18rem" }}>
                         <img src={art.image} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">{art.title}</h5>
-                            <p className="card-text">{art.author}</p>
+                            <h5 className="card-title" style={{ fontFamily: "'Libre Baskerville', serif", fontSize: "20px", letterSpacing: "3px" }}> Art Title: {art.title}</h5>
+                            <p className="card-text" style={{ fontFamily: "'Libre Baskerville', serif", fontSize: "16px", fontStyle: "italic", letterSpacing: "3px" }}>Artist: {art.author}</p>
                             <a className="btn btn-dark" onClick={() => remove(art._id)} style={{ marginLeft: "100px" }}><i className="fa fa-trash" aria-hidden="true"></i></a>
                         </div>
                     </div>
