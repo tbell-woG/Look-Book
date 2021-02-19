@@ -2,11 +2,11 @@
  An art application that brings the art muesuem to you. Using an API, it allows users to view art from different time periods around the world, favorite and also reflect on them. 
 #
 
-Website Deployment Link: https://
+Website Deployment Link: https://sleepy-basin-63307.herokuapp.com/
 
-Presentation Link: https://
+Presentation Link: https://docs.google.com/presentation/d/1ttSGP1EemXDX7XyhkX8Tr8P701oyoMwwv9Ac0pgV2ck/edit#slide=id.gbf004cb2ba_0_109
 
-Demo Video Link: https://
+Demo Video Link: https://drive.google.com/file/d/1gRmvIJK3VPpjSgBbXM9-klxkLVjRYs3t/view?usp=sharing
 #
 ## Table of Contents
 * [Project Description](#description)
@@ -28,7 +28,7 @@ Lookbook is an application designed around this idea. Through viewing art in a p
 #
 <br>
 
-<img src="" alt="" border="0">
+<img src="https://i.ibb.co/MMwk2nz/Screen-Shot-2021-02-18-at-8-09-27-PM.png" alt="Screen-Shot-2021-02-18-at-8-09-27-PM" border="0">
 <br>
 <br>
 
