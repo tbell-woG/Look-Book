@@ -1,17 +1,19 @@
 /* imported styling for Navbar from home.css for now */
-
-.lb-navbar {
+​
+.navbar {
   width: 100%;
-  /* background-color: rgb(255, 255, 255) !important; */
+  color: rgb(228, 212, 158);
   overflow: auto;
   border-bottom: 2px solid rgb(0, 0, 0);
-  font-family: 'Libre Baskerville', serif;
 }
-
-/* Font color now shows in black */
-.nav-link {
+​
+.nav-item > h4 {
   color: black;
+}
+​
+.nav-item {
   font-size: 25px;
+  display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
 }
