@@ -24,7 +24,7 @@ Art and the visual element of our world not only allow us to connect to the worl
 Lookbook is an application designed around this idea. Through viewing art in a portable, digital space, the power of the art museum (now a closed environment because of COVID-19 restrictions) becomes readily available to everyone, everywhere, on any device. Since so many museums and cultural institutions have been forced to shut their doors temporarily, having them available in the form of a mobile app reveals the transformative potential of Lookbook as not just an alternative to scrolling social media, but a medium in itself to reflect on an image that a user finds striking, meditate on it, and record these thoughts.
 <br>
 <br>
- Using the Rijksmuseum (Amsterdam, Netherlands) API, Lookbook is able to display well over 650,000 pieces of art from their collection. On the homepage, the user is welcomed with the Lookbook logo, slogan, and an image of The Thinker sculpture by Augstine Rodin. They are also able to click several links in the navigation bar: "Home", "About", "Log In", "Sign Up", "Search", and "Favorites". Users are allowed to create an account using their email and password, which will allow them to login at anytime to view their collection. On the "Favorites" page, the user is allowed to view their collection of favorited art pieces that they have saved in their profile. There they can reflect on what that that piece means to them. On the "Search" page, the user is presented with an art piece and they can decide whether to like or dislike the piece. if they like the like, it will be saved into their favorites collection. If they dislike a piece, a new art piece will appear for them to make a decision. The Lookbook app was created using HTML, CSS, Javascript, React, Node.js, Express, Mongoose, and several other dependencies. It also used Rijksmuseum API as its databse to display all of the art pieces.
+ Using the Rijksmuseum (Amsterdam, Netherlands) API, Lookbook is able to display well over 650,000 pieces of art from their collection. On the homepage, the user is welcomed with the Lookbook logo, slogan, and an image of The Thinker sculpture by Augstine Rodin. They are also able to click several links in the navigation bar: "Home", "About", "Log In", "Sign Up", "Search", and "Favorites". Users are allowed to create an account using their email and password, which will allow them to login at anytime to view their collection. On the "Favorites" page, the user is allowed to view their collection of favorited art pieces that they have saved in their profile. There they can keep the piece in their favorites or delete them. On the "Search" page, the user is presented with an art piece and they can decide whether to like or dislike the piece. If they like the piece, it will be saved into their favorites collection. If they dislike a piece, a new art piece will appear for them to make a decision. The Lookbook app was created using HTML, CSS, Javascript, React, Node.js, Express, Mongoose, and several other dependencies. It also used Rijksmuseum API as its databse to display all of the art pieces.
 #
 <br>
 
@@ -39,12 +39,15 @@ The Lookbook application was created with these coding languages and dependencie
 * CSS
 * JavaScript
 * Node.js
-* React
+* React Js
 * Axios 
 * Express
 * Bootstrap
 * Foundation
+* Normalize.css
+* MongoDB
 * Mongoose
+* Passport Js
 
 <br>
 
