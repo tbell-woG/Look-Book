@@ -93,23 +93,24 @@ function Art() {
     }
 
     return (
-        <div>
+        <div style={{ fontFamily: "'Libre Baskerville', serif", letterSpacing: "7px", textAlign: "center", fontStyle: "italic", fontSize: "30px", padding: "70px" }}>
                 VIEW AND FAVORITE ART PIECES
             {art.length ? (
                 //map over data and make a card element
                 // select a random number between 1 and 6
 
-                <div className="card" style={{ width: "18rem" }}>
+                <div className="card" style={{ marginTop: "75px", width: "18rem" }}>
                     <img src={art[index].webImage.url} className="card-img-top" alt="Picture coming from the art database" />
                     <div className="card-body">
-                        <h5 className="card-title">Art Title: {art[index].title}</h5>
-                        <p className="card-text">Artist: {art[index].principalOrFirstMaker}</p>
-                        <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-dark"><i className="fa fa-thumbs-up" aria-hidden="true"></i></a>
-                        <a href="#" onClick={voteNo} className="btn btn-dark"><i className="fa fa-thumbs-down" aria-hidden="true"></i></a>
-                        
+                        <h5 className="card-title" style={{ fontFamily: "'Libre Baskerville', serif", fontSize: "20px", letterSpacing: "3px" }}>Art Title: {art[index].title}</h5>
+                        <p className="card-text" style={{ fontFamily: "'Libre Baskerville', serif", fontSize: "16px", letterSpacing: "3px" }}>Artist: {art[index].principalOrFirstMaker}</p>
+                        <div className="vote-buttons">
+                            <a href="#" onClick={() => voteYes (art[index].title, art[index].webImage.url, art[index].principalOrFirstMaker)} className="btn btn-dark"><i className="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                            <a href="#" onClick={voteNo} className="btn btn-dark" style={{ marginLeft: "20px" }}><i className="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
-            ) : <h1>LOADING ART PIECES...</h1>}
+            ) : <h1 style={{ fontFamily: "'Libre Baskerville', serif", letterSpacing: "7px", textAlign: "center", fontSize: "30px", padding: "70px" }}>LOADING ART PIECES...</h1>}
         </div>
     )
 }

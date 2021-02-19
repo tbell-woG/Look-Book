@@ -26,6 +26,7 @@
     "font-awesome": "^4.7.0",
     "foundation-sites": "^6.6.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.11.15"
+    "mongoose": "^5.11.15",
+    "normalize.css": "^8.0.1"
   }
 }

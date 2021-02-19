@@ -11,6 +11,10 @@
     padding-left: auto;
 }
 
+.card-body {
+    background-color: black;
+}
+
 /* centers content / categories for selected art piece */
 .card-section {
     justify-content: center;
